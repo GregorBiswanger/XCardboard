@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>XCardboard</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="background-color: red;">
+            <img id="leftScreen" width="100%" style="background-image: url(img/panorama.jpg); background-size: 4625px 774px; background-position: 0px 470px;">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="background-color: blue;">
+            <img id="rightScreen" width="100%" style="background-image: url(img/panorama.jpg); background-size: 4625px 774px; background-position: 0px 470px;">
+        </div>
+    </div>
+    <label id="output"></label>
+<!--
+<audio autoplay="autoplay">
+    <source src="sound/park.mp3" type="audio/mpeg">
+</audio>
+-->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="xhr.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function onDeviceReady() {
+            if (navigator.splashscreen && navigator.splashscreen.hide) {
+                navigator.splashscreen.hide();
+            }
+            if (window.intel && intel.xdk && intel.xdk.device) {
+                if (intel.xdk.device.hideSplashScreen)
+                    intel.xdk.device.hideSplashScreen();
+            }
+
+            app().initialize();
+        }
+        document.addEventListener("deviceready", onDeviceReady, false);
+    </script>
+</body>
+
+</html>

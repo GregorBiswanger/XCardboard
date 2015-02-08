@@ -1,0 +1,163 @@
+{
+  "project": {
+    "projectSettingsVersion": "1.1",
+    "creationData": {
+      "type": "Demo",
+      "projectTypeName": "com.intel.xdk.projecttype.jsapp",
+      "src": "",
+      "projectGuid": "5d87cbe7-229a-467f-afd8-ea947e956f3b",
+      "lastModifiedDate": 1423164600421,
+      "creationDate": 1423163447629
+    },
+    "XDK-app-designer": "false",
+    "sourceDirectory": "www",
+    "startFile": "index.html",
+    "projectFiles": {},
+    "projectDirectories": {},
+    "libraries": [
+      {
+        "name": "Cordova",
+        "version": "2.9.0",
+        "data": {
+          "default": true
+        }
+      },
+      {
+        "name": "intelXDK",
+        "version": "4.0.0",
+        "data": {
+          "default": true
+        }
+      }
+    ],
+    "serviceMethods": [],
+    "cordovaPluginsDirectory": "plugins",
+    "cordovaPlugins": [],
+    "buildConfigurations": {
+      "Android": {
+        "platform_": "android",
+        "runtime_": "Cordova 3.x",
+        "name_": "Android",
+        "preferences_": {
+          "android-minSdkVersion": "10",
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto",
+          "Orientation": "landscape",
+          "Fullscreen": true
+        },
+        "isActive_": true,
+        "appName_": "XCardboard",
+        "appID_": "xdk.intel.blank.template",
+        "appAccess_": "*",
+        "icons_": [],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.5",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "0.0.1",
+        "appDescription_": "Use this template to start with a simple index.html file for creating mobile apps.",
+        "appAuthor_": "",
+        "appVersionCode_": "1"
+      },
+      "Android-Crosswalk": {
+        "platform_": "android",
+        "runtime_": "Crosswalk with Cordova 3.x",
+        "name_": "Android-Crosswalk",
+        "preferences_": {
+          "android-minSdkVersion": "14",
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto",
+          "Orientation": "landscape",
+          "Fullscreen": true
+        },
+        "isActive_": true,
+        "appName_": "XCardboard",
+        "appID_": "xdk.intel.blank.template",
+        "appAccess_": "*",
+        "icons_": [],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.5",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "0.0.1",
+        "appDescription_": "Use this template to start with a simple index.html file for creating mobile apps.",
+        "appAuthor_": "",
+        "appVersionCode_": "1"
+      },
+      "iOS": {
+        "platform_": "ios",
+        "runtime_": "Cordova 3.x",
+        "name_": "iOS",
+        "preferences_": {
+          "ios-target": "5",
+          "ios-configuration": "adhoc",
+          "Orientation": "landscape",
+          "Fullscreen": true
+        },
+        "isActive_": true,
+        "appName_": "XCardboard",
+        "appID_": "xdk.intel.blank.template",
+        "appAccess_": "*",
+        "icons_": [],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.5",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "0.0.1",
+        "appDescription_": "Use this template to start with a simple index.html file for creating mobile apps."
+      },
+      "Windows8": {
+        "platform_": "windows8",
+        "runtime_": "Cordova 3.x",
+        "name_": "Windows8",
+        "preferences_": {
+          "windows-publisher-display-name": "",
+          "windows-publisher-id": "",
+          "Orientation": "landscape",
+          "Fullscreen": true
+        },
+        "isActive_": true,
+        "appName_": "XCardboard",
+        "appID_": "xdk.intel.blank.template",
+        "appAccess_": "*",
+        "icons_": [],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.5",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "0.0.0.1",
+        "appDescription_": "Use this template to start with a simple index.html file for creating mobile apps."
+      },
+      "WindowsPhone8": {
+        "platform_": "wp8",
+        "runtime_": "Cordova 3.x",
+        "name_": "WindowsPhone8",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "XCardboard",
+        "appID_": "xdk.intel.blank.template",
+        "appAccess_": "*",
+        "icons_": [],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.5",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "0.0.0.1",
+        "appDescription_": "Use this template to start with a simple index.html file for creating mobile apps."
+      }
+    },
+    "gameAssetDirectory": "asset",
+    "gameMetadata": {},
+    "projectTags": []
+  }
+}
