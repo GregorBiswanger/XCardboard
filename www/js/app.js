@@ -3,14 +3,24 @@ var app = function () {
         $("#leftScreen").css("height", window.innerHeight - 20);
         $("#rightScreen").css("height", window.innerHeight - 20);
 
+        var oldMH = 0;
+        
         function onSuccess(heading) {
             var pictureWidth = 4625;
-            var picturePosition = Math.round(pictureWidth / 360 * heading.magneticHeading);
+            
+            $("#output").html(heading.magneticHeading + " old: " + oldMH);
+            var rest = heading.magneticHeading - oldMH;
+            
+            if(rest >= 6 || rest <= -6)
+            {
+                var picturePosition = Math.round(pictureWidth / 360 * heading.magneticHeading);
 
-            $("#leftScreen").css("background-position", "-" + picturePosition + "px 470px");
-            $("#rightScreen").css("background-position", "-" + picturePosition + "px 470px");
-
-            lastPicturePosition = picturePosition;
+                $("#leftScreen").css("background-position", "-" + picturePosition + "px 470px");
+                $("#rightScreen").css("background-position", "-" + picturePosition + "px 470px");
+                
+                oldMH = heading.magneticHeading;
+                lastPicturePosition = picturePosition;
+            }
         }
 
         function onError(compassError) {
