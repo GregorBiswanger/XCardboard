@@ -1,0 +1,4 @@
+intelxdk.config.*.xml
+!intelxdk.config.additions.xml
+*.mobileprovision
+*.xdke
