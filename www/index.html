@@ -33,8 +33,8 @@
                 <label for="tbCA">Compass adjustment:</label>
                 <input type="text" id="tbCA" class="form-control">
                 <br />
-                <a href="#" id="btchpano" class="btn btn-warning btn-sm btn-block">Choose own Panorama</a>
-                <a href="#" id="btonpano" class="btn btn-warning btn-sm btn-block">Search Online</a>
+                <a href="#" id="btchpano" class="btn btn-warning btn-sm btn-block">Choose own panorama</a>
+                <a href="#" id="btonpano" class="btn btn-warning btn-sm btn-block">Search online</a>
 <!--
                 <br />
                 <br />
@@ -47,22 +47,31 @@
         
         <div id="fonpano" class="" style="visibilty: hidden; overflow: scroll; z-index: 9001; position: absolute; top:0; left:0; width: 100%; height:100%; background-color: #fff;">
             <div style="padding: 10px;">  
-            <br />
-                San Francisco bridge:
-                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Golden_Gate_Bridge_Panorama_Photo.jpg/120px-Golden_Gate_Bridge_Panorama_Photo.jpg" width="100%">
-                <a href="#http://upload.wikimedia.org/wikipedia/commons/f/f9/Golden_Gate_Bridge_Panorama_Photo.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">Choose this Panorama</a><br />
+
+                <a href="#http://pixeldraw.de/pano/sfb.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
+                    <img src="http://pixeldraw.de/pano/sfb_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;"><br />
+                    <b>San Francisco Golden Gate Bridge</b>
+                </a><br />
+
+                <a href="#http://pixeldraw.de/pano/knuell.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
+                    <img src="http://pixeldraw.de/pano/knuell_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;"><br />
+                    <b>Forest Knüllköpfchen Germany</b>
+                </a><br />
                 
-                Forest Knuellkoepfchen Germany:
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmHrtJMxUOAInzziQENE8qdaUBLSWKOIzYMg4NERLMGvgyevm57A" width="100%">
-                <a href="#http://marcel.photography/panorama/gfx/Knuellkopfchen_360Grad_v3.1.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">Choose this Panorama</a><br />
+                <a href="#http://pixeldraw.de/pano/niesen.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
+                    <img src="http://pixeldraw.de/pano/niesen_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;"><br />
+                    <b>Hills  Niesens</b>
+                </a><br />
                 
-                Hills Niesens:
-                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Niesen_Panorama.jpg/120px-Niesen_Panorama.jpg" width="100%">
-                <a href="#http://upload.wikimedia.org/wikipedia/commons/e/ef/Niesen_Panorama.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">Choose this Panorama</a><br />
+                <a href="#http://pixeldraw.de/pano/duesseldorf.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
+                    <img src="http://pixeldraw.de/pano/duesseldorf_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;"><br />
+                    <b>Düsseldorf Bilk City</b>
+                </a><br />
                 
-                Düsseldorf Bilk City
-                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/17/360Grad-Panorama_D%C3%BCsseldorf-Bilk-SBahnhof.jpg/120px-360Grad-Panorama_D%C3%BCsseldorf-Bilk-SBahnhof.jpg" width="100%">
-                <a href="#http://upload.wikimedia.org/wikipedia/commons/1/17/360Grad-Panorama_D%C3%BCsseldorf-Bilk-SBahnhof.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">Choose this Panorama</a><br />
+                <a href="#http://pixeldraw.de/pano/wildkogel.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
+                    <img src="http://pixeldraw.de/pano/wildkogel_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;"><br />
+                    <b>Wildkogel Kitzbüheler Alpen</b>
+                </a><br />
 
                 <br />
                 <a href="#" id="btonpano" class="btn btn-primary btn-block">Close</a>
@@ -117,9 +126,9 @@
             $("#rightScreen").css({"background-image" : "url("+picurl+")"});
           }
         }
-        document.addEventListener("intel.xdk.camera.picture.add",onCamSuccess); 
-        document.addEventListener("intel.xdk.camera.picture.busy",onCamSuccess); 
-        document.addEventListener("intel.xdk.camera.picture.cancel",onCamSuccess);
+        document.addEventListener("intel.xdk.camera.picture.add", onCamSuccess); 
+        document.addEventListener("intel.xdk.camera.picture.busy", onCamSuccess); 
+        document.addEventListener("intel.xdk.camera.picture.cancel", onCamSuccess);
     </script>
 </body>
 
