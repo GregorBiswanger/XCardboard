@@ -64,6 +64,12 @@ var app = function () {
         });
         
         
+        $(document).on("click", ".pano", function(evt)
+        {
+            saveSettings();
+            $("#fset").fadeOut();
+        });
+        
         $("#leftScreen").css("height", window.innerHeight - 20);
         $("#rightScreen").css("height", window.innerHeight - 20);
 
