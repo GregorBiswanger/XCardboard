@@ -1,39 +1,37 @@
 var app = function () {
     var initialize = function () {
 
-        $("#tbCA").val(localStorage.getItem("ca"));
-        $("#tbSA").val(localStorage.getItem("sa"));
+        var lsCA = 6;
+        
+        function loadSettings() {
+            $("#tbCA").val(localStorage.getItem("ca"));
+            $("#tbSA").val(localStorage.getItem("sa"));
+            
+            if($("#tbCA").val() == "")
+                $("#tbCA").val(6);
+            
+            if($("#tbSA").val() == "")
+                $("#tbSA").val(0.9);
+            
+            lsCA = parseInt($("#tbCA").val());
+            $(".pano").css("transition", $("#tbSA").val() + "s ease");
+        }
+        
+        function saveSettings() {
+            localStorage.setItem("ca", $("#tbCA").val());
+            localStorage.setItem("sa", $("#tbSA").val());
+            
+            lsCA = parseInt($("#tbCA").val());
+            $(".pano").css("transition", $("#tbSA").val() + "s ease");
+        }
+        
         
         $("#fset").hide();
-        var lsCA = parseInt(localStorage.getItem("ca"));
-            
-        if(lsCA === null || lsCA === "" || lsCA === undefined || lsCA === 0)
-        {
-            $("#tbCA").val(6);
-            lsCA = 6;
-        }
-        
-        var lsSA = localStorage.getItem("sa");
-            
-        if(lsSA === null || lsSA === "" || lsSA === undefined || lsSA === 0)
-        {
-            lsSA = 0.9;
-            $("#tbSA").val(0.9);
-        }
-        
-        $(".pano").css("transition", lsSA + "s ease");
-        
+        loadSettings();
+
         $(document).on("click", "#btfsetsave", function(evt)
         {
-            var ca = $("#tbCA").val();
-            var sa = $("#tbSA").val();
-            localStorage.setItem("ca", ca);
-            localStorage.setItem("sa", sa);
-            
-            lsCA = parseInt(ca);
-            LsSA = sa;
-            $(".pano").css("transition", sa + "s ease");
-            
+            saveSettings();
             alert("Settings saved!");
             $("#fset").toggle("slide").css("visibility", "visible");
         });
@@ -41,6 +39,11 @@ var app = function () {
         $(document).on("click", "#btfset", function(evt)
         {
             $("#fset").toggle("slide").css("visibility", "visible");
+        });
+        
+        $(document).on("click", "#btchpano", function(evt)
+        {
+            intel.xdk.camera.importPicture();
         });
         
         
@@ -91,6 +94,7 @@ var app = function () {
         };
 
         navigator.accelerometer.watchAcceleration(onAccelerationSuccess, onError, optionsAcceleration);
+        
     };
 
     return {
