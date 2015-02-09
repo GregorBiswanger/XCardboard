@@ -43,6 +43,31 @@
             </div>
           </div>
         
+        <div id="fonpano" class="" style="visibilty: hidden; overflow: scroll; z-index: 9001; position: absolute; top:0; left:0; width: 250px; height:100%; background-color: #fff;">
+            <div style="padding: 10px;">  
+            <br />
+                San Francisco bridge:
+                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Golden_Gate_Bridge_Panorama_Photo.jpg/120px-Golden_Gate_Bridge_Panorama_Photo.jpg" width="100%">
+                <a href="#http://upload.wikimedia.org/wikipedia/commons/f/f9/Golden_Gate_Bridge_Panorama_Photo.jpg" id="btsfb" class="btn btn-warning btn-xs btn-block">Choose this Panorama</a><br />
+                
+                Forest Knuellkoepfchen Germany:
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmHrtJMxUOAInzziQENE8qdaUBLSWKOIzYMg4NERLMGvgyevm57A" width="100%">
+                <a href="#http://marcel.photography/panorama/gfx/Knuellkopfchen_360Grad_v3.1.jpg" id="btsfb" class="btn btn-warning btn-xs btn-block">Choose this Panorama</a><br />
+                
+                Hills Niesens:
+                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Niesen_Panorama.jpg/120px-Niesen_Panorama.jpg" width="100%">
+                <a href="#http://upload.wikimedia.org/wikipedia/commons/e/ef/Niesen_Panorama.jpg" id="btsfb" class="btn btn-warning btn-xs btn-block">Choose this Panorama</a><br />
+                
+                Düsseldorf Bilk City
+                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/17/360Grad-Panorama_D%C3%BCsseldorf-Bilk-SBahnhof.jpg/120px-360Grad-Panorama_D%C3%BCsseldorf-Bilk-SBahnhof.jpg" width="100%">
+                <a href="#http://upload.wikimedia.org/wikipedia/commons/1/17/360Grad-Panorama_D%C3%BCsseldorf-Bilk-SBahnhof.jpg" id="btsfb" class="btn btn-warning btn-xs btn-block">Choose this Panorama</a><br />
+
+                <br />
+                <a href="#" id="btonpano" class="btn btn-primary">Close</a>
+              <br /><br />
+            </div>
+          </div>
+        
         <div class="pano" style="z-index: 800;">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0;">
                 <img id="leftScreen" width="100%" style="background-image: url(img/panorama.jpg); background-size: 4625px 774px; background-position: 0px 470px;">
@@ -80,28 +105,14 @@
         document.addEventListener("deviceready", onDeviceReady, false);
         
         function onCamSuccess(evt) {
-          if (evt.success == true)
-          {
+          if (evt.success == true) {
             var image = document.createElement('img');
             image.src=intel.xdk.camera.getPictureURL(evt.filename);
             image.id=evt.filename;
 
-              var picurl = image.src;
-            $("#leftScreen").css("background-image", "url("+picurl+");");
-            $("#rightScreen").css("background-image", "url("+picurl+");");
-        
-              $("#output").html(picurl);
-          }
-          else
-          {
-            if (evt.message != undefined)
-            {
-                alert(evt.message);
-            }
-            else
-            {
-                alert("error capturing picture");
-            }
+            var picurl = image.src;
+            $("#leftScreen").css({"background-image" : "url("+picurl+")"});
+            $("#rightScreen").css({"background-image" : "url("+picurl+")"});
           }
         }
         document.addEventListener("intel.xdk.camera.picture.add",onCamSuccess); 

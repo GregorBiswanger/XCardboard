@@ -25,7 +25,7 @@ var app = function () {
             $(".pano").css("transition", $("#tbSA").val() + "s ease");
         }
         
-        
+        $("#fonpano").hide();
         $("#fset").hide();
         loadSettings();
 
@@ -44,6 +44,23 @@ var app = function () {
         $(document).on("click", "#btchpano", function(evt)
         {
             intel.xdk.camera.importPicture();
+        });
+        
+        $(document).on("click", "#btonpano", function(evt)
+        {
+            $("#fonpano").toggle("slide").css("visibility", "visible");
+        });
+        
+        $(document).on("click", "#btsfb", function(evt)
+        {
+            var href = $(this).attr('href');
+            var link = href.replace("#", "");
+            
+            $("#leftScreen").css({"background-image" : "url("+link+")"});
+            $("#rightScreen").css({"background-image" : "url("+link+")"});
+            
+            $("#fonpano").toggle("slide").css("visibility", "visible");
+            $("#fset").toggle("slide").css("visibility", "visible");
         });
         
         
