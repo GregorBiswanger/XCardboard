@@ -27,6 +27,7 @@ var app = function () {
         
         $("#fonpano").hide();
         $("#fset").hide();
+        $("#load").hide();
         loadSettings();
 
         $(document).on("click", "#btfsetsave", function(evt)
@@ -53,6 +54,8 @@ var app = function () {
         
         $(document).on("click", "#btsfb", function(evt)
         {
+            $("#load").show("slide").css("visibility", "visible");
+            
             var href = $(this).attr('href');
             var link = href.replace("#", "");
             
@@ -61,6 +64,8 @@ var app = function () {
             
             $("#fonpano").toggle("slide").css("visibility", "visible");
             $("#fset").toggle("slide").css("visibility", "visible");
+            
+            setTimeout(function(){ $("#load").hide("slide"); }, 5000);
         });
         
         
