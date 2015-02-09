@@ -1,5 +1,49 @@
 var app = function () {
     var initialize = function () {
+
+        $("#tbCA").val(localStorage.getItem("ca"));
+        $("#tbSA").val(localStorage.getItem("sa"));
+        
+        $("#fset").hide();
+        var lsCA = parseInt(localStorage.getItem("ca"));
+            
+        if(lsCA === null || lsCA === "" || lsCA === undefined || lsCA === 0)
+        {
+            $("#tbCA").val(6);
+            lsCA = 6;
+        }
+        
+        var lsSA = localStorage.getItem("sa");
+            
+        if(lsSA === null || lsSA === "" || lsSA === undefined || lsSA === 0)
+        {
+            lsSA = 0.9;
+            $("#tbSA").val(0.9);
+        }
+        
+        $(".pano").css("transition", lsSA + "s ease");
+        
+        $(document).on("click", "#btfsetsave", function(evt)
+        {
+            var ca = $("#tbCA").val();
+            var sa = $("#tbSA").val();
+            localStorage.setItem("ca", ca);
+            localStorage.setItem("sa", sa);
+            
+            lsCA = parseInt(ca);
+            LsSA = sa;
+            $(".pano").css("transition", sa + "s ease");
+            
+            alert("Settings saved!");
+            $("#fset").toggle("slide").css("visibility", "visible");
+        });
+        
+        $(document).on("click", "#btfset", function(evt)
+        {
+            $("#fset").toggle("slide").css("visibility", "visible");
+        });
+        
+        
         $("#leftScreen").css("height", window.innerHeight - 20);
         $("#rightScreen").css("height", window.innerHeight - 20);
 
@@ -8,10 +52,11 @@ var app = function () {
         function onSuccess(heading) {
             var pictureWidth = 4625;
             
-            $("#output").html(heading.magneticHeading + " old: " + oldMH);
             var rest = heading.magneticHeading - oldMH;
             
-            if(rest >= 6 || rest <= -6)
+            $("#output").html(heading.magneticHeading + " old: " + oldMH + " cs:" + lsCA);
+            
+            if(rest >= lsCA || rest <= -lsCA)
             {
                 var picturePosition = Math.round(pictureWidth / 360 * heading.magneticHeading);
 
@@ -24,11 +69,11 @@ var app = function () {
         }
 
         function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+            //alert('Compass error: ' + compassError.code);
         }
 
         var options = {
-            frequency: 500
+            frequency: 50
         };
 
         navigator.compass.watchHeading(onSuccess, onError, options);
@@ -42,7 +87,7 @@ var app = function () {
         }
 
         var optionsAcceleration = {
-            frequency: 350
+            frequency: 50
         };
 
         navigator.accelerometer.watchAcceleration(onAccelerationSuccess, onError, optionsAcceleration);

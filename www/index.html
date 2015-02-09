@@ -7,20 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
-        * {
-        transition: 0.5s ease;
-        transform: translate3d(0, 0, 0);
+        .pano * {
+            transition: 0.9s ease;
+            transform: translate3d(0, 0, 0);
         }
     </style>
 </head>
 
 <body>
     <div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="background-color: red;">
-            <img id="leftScreen" width="100%" style="background-image: url(img/panorama.jpg); background-size: 4625px 774px; background-position: 0px 470px;">
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="background-color: blue;">
-            <img id="rightScreen" width="100%" style="background-image: url(img/panorama.jpg); background-size: 4625px 774px; background-position: 0px 470px;">
+        <div id="btfset" class="" style="visibilty: hidden; overflow: hidden; z-index: 900; position: absolute; top:0; right:0; padding-top:20px; padding-right: 10px;">
+              <button type="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </button>
+          </div>
+        
+        <div id="fset" class="" style="visibilty: hidden; overflow: scroll; z-index: 9000; position: absolute; top:0; right:0; width: 250px; height:100%; background-color: #fff;">
+            <div style="padding: 10px;">  
+            <br />
+                <center><img src="img/logo.png" style="width:150px;"></center>
+                <br /><br />
+                Smooth adjustment:<br />
+                <input type="text" id="tbSA">
+                <br /><br />
+                
+                Compass adjustment:<br />
+                <input type="text" id="tbCA">
+                <br /><br />
+                
+                <a href="#" id="btfsetsave" class="btn btn-success">Save</a>
+                <a href="#" id="btfset" class="btn btn-primary">Close</a>
+              <br /><br />
+            </div>
+          </div>
+        
+        <div class="pano" style="z-index: 800;">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0;background-color: red;">
+                <img id="leftScreen" width="100%" style="background-image: url(img/panorama.jpg); background-size: 4625px 774px; background-position: 0px 470px;">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0;background-color: blue;">
+                <img id="rightScreen" width="100%" style="background-image: url(img/panorama.jpg); background-size: 4625px 774px; background-position: 0px 470px;">
+            </div>
         </div>
     </div>
     <label id="output"></label>
