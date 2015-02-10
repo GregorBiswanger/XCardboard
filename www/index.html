@@ -11,37 +11,46 @@
             transition: 0.9s ease;
             transform: translate3d(0, 0, 0);
         }
+
+        @media screen and (min-device-height: 850px) and (orientation: landscape) {
+            .screen {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div>
+    <div class="screen">
         <div id="btfset" class="" style="visibilty: hidden; overflow: hidden; z-index: 900; position: absolute; top:0; right:0; padding-top:20px; padding-right: 10px;">
-              <button type="button" class="btn btn-default">
+            <button type="button" class="btn btn-default">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </button>
-          </div>
-        
+            </button>
+        </div>
+
         <div id="load" class="alert alert-warning" style="visibilty: hidden; position: absolute; top:50%; left:50%; width: 150px; height:54px;margin-top: -27px; margin-left: -75px; z-index: 999999;">
             <center>
                 <b>Loading...</b>
             </center>
-          </div>
-        
+        </div>
+
         <div id="fset" class="" style="visibilty: hidden; overflow: scroll; z-index: 9000; position: absolute; top:0; right:0; width: 250px; height:100%; background-color: #fff;">
-            <div style="padding: 10px;">  
-            <br />
-                <center><img src="img/logo.png" style="width:150px;"></center>
+            <div style="padding: 10px;">
+                <br />
+                <center><img src="img/logo.png" style="width:150px;">
+                </center>
                 <br />
                 <label for="tbSA">Smooth adjustment:</label>
                 <input type="text" id="tbSA" class="form-control">
-                <br />                
+                <br />
                 <label for="tbCA">Compass adjustment:</label>
                 <input type="text" id="tbCA" class="form-control">
                 <br />
                 <a href="#" id="btchpano" class="btn btn-warning btn-sm btn-block">Choose own panorama</a>
                 <a href="#" id="btonpano" class="btn btn-warning btn-sm btn-block">Search online</a>
-<!--
+                <!--
                 <br />
                 <br />
                 <a href="#" id="btfsetsave" class="btn btn-success">Save</a>
@@ -49,42 +58,53 @@
               <br /><br />
 -->
             </div>
-          </div>
-        
+        </div>
+
         <div id="fonpano" class="" style="visibilty: hidden; overflow: scroll; z-index: 9001; position: absolute; top:0; left:0; width: 100%; height:100%; background-color: #fff;">
-            <div style="padding: 10px;">  
+            <div style="padding: 10px;">
 
                 <a href="#http://pixeldraw.de/pano/sfb.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
-                    <img src="http://pixeldraw.de/pano/sfb_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;"><br />
+                    <img src="http://pixeldraw.de/pano/sfb_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;">
+                    <br />
                     <b>San Francisco Golden Gate Bridge</b>
-                </a><br />
+                </a>
+                <br />
 
                 <a href="#http://pixeldraw.de/pano/knuell.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
-                    <img src="http://pixeldraw.de/pano/knuell_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;"><br />
+                    <img src="http://pixeldraw.de/pano/knuell_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;">
+                    <br />
                     <b>Forest Knüllköpfchen Germany</b>
-                </a><br />
-                
+                </a>
+                <br />
+
                 <a href="#http://pixeldraw.de/pano/niesen.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
-                    <img src="http://pixeldraw.de/pano/niesen_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;"><br />
+                    <img src="http://pixeldraw.de/pano/niesen_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;">
+                    <br />
                     <b>Hills  Niesens</b>
-                </a><br />
-                
+                </a>
+                <br />
+
                 <a href="#http://pixeldraw.de/pano/duesseldorf.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
-                    <img src="http://pixeldraw.de/pano/duesseldorf_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;"><br />
+                    <img src="http://pixeldraw.de/pano/duesseldorf_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;">
+                    <br />
                     <b>Düsseldorf Bilk City</b>
-                </a><br />
-                
+                </a>
+                <br />
+
                 <a href="#http://pixeldraw.de/pano/wildkogel.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
-                    <img src="http://pixeldraw.de/pano/wildkogel_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;"><br />
+                    <img src="http://pixeldraw.de/pano/wildkogel_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;">
+                    <br />
                     <b>Wildkogel Kitzbüheler Alpen</b>
-                </a><br />
+                </a>
+                <br />
 
                 <br />
                 <a href="#" id="btonpano" class="btn btn-primary btn-block">Close</a>
-              <br /><br />
+                <br />
+                <br />
             </div>
-          </div>
-        
+        </div>
+
         <div class="pano" style="z-index: 800;">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0;">
                 <img id="leftScreen" width="100%" style="background-image: url(img/panorama.jpg); background-size: 4625px 774px; background-position: 0px 470px;">
@@ -95,7 +115,7 @@
         </div>
     </div>
     <label id="output"></label>
-<!--
+    <!--
 <audio autoplay="autoplay">
     <source src="sound/park.mp3" type="audio/mpeg">
 </audio>
@@ -120,25 +140,31 @@
             app().initialize();
         }
         document.addEventListener("deviceready", onDeviceReady, false);
-        
-        function onCamSuccess(evt) {
-          if (evt.success == true) {
-            $("#fset").fadeOut();
-            $("#load").show("slide").css("visibility", "visible");
-              
-            var image = document.createElement('img');
-            image.src=intel.xdk.camera.getPictureURL(evt.filename);
-            image.id=evt.filename;
 
-            var picurl = image.src;
-            $("#leftScreen").css({"background-image" : "url("+picurl+")"});
-            $("#rightScreen").css({"background-image" : "url("+picurl+")"});
-              
-            setTimeout(function(){ $("#load").hide("slide"); }, 3000);
-          }
+        function onCamSuccess(evt) {
+            if (evt.success == true) {
+                $("#fset").fadeOut();
+                $("#load").show("slide").css("visibility", "visible");
+
+                var image = document.createElement('img');
+                image.src = intel.xdk.camera.getPictureURL(evt.filename);
+                image.id = evt.filename;
+
+                var picurl = image.src;
+                $("#leftScreen").css({
+                    "background-image": "url(" + picurl + ")"
+                });
+                $("#rightScreen").css({
+                    "background-image": "url(" + picurl + ")"
+                });
+
+                setTimeout(function () {
+                    $("#load").hide("slide");
+                }, 3000);
+            }
         }
-        document.addEventListener("intel.xdk.camera.picture.add", onCamSuccess); 
-        document.addEventListener("intel.xdk.camera.picture.busy", onCamSuccess); 
+        document.addEventListener("intel.xdk.camera.picture.add", onCamSuccess);
+        document.addEventListener("intel.xdk.camera.picture.busy", onCamSuccess);
         document.addEventListener("intel.xdk.camera.picture.cancel", onCamSuccess);
     </script>
 </body>
