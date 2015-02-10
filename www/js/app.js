@@ -2,10 +2,12 @@ var app = function () {
     var initialize = function () {
 
         var lsCA = 6;
+        var lsSPopUP = 0;
 
         function loadSettings() {
             $("#tbCA").val(localStorage.getItem("ca"));
             $("#tbSA").val(localStorage.getItem("sa"));
+            lsSPopUP = parseInt(localStorage.getItem("popup"));
 
             if ($("#tbCA").val() == "")
                 $("#tbCA").val(6);
@@ -15,6 +17,9 @@ var app = function () {
 
             lsCA = parseInt($("#tbCA").val());
             $(".pano").css("transition", $("#tbSA").val() + "s ease");
+            
+            if(lsSPopUP == 1)
+                $("#fpopup").hide();
         }
 
         function saveSettings() {
@@ -27,9 +32,22 @@ var app = function () {
 
         $("#fonpano").hide();
         $("#fset").hide();
-        $("#load").hide();
+        $("#load").hide();        
         loadSettings();
 
+        $(document).on("click", "#btgoamazon", function (evt) {
+            intel.xdk.device.launchExternal("http://www.amazon.de/gp/product/B00NF8PO4G/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B00NF8PO4G&linkCode=as2&tag=doblne-21&linkId=AJGHZL57FNTE6DMQ");
+        });
+        
+        $(document).on("click", "#btclosepopup", function (evt) {
+            $("#fpopup").toggle("slide").css("visibility", "visible");
+        });
+        
+        $(document).on("click", "#btclosenoshowpopup", function (evt) {
+            localStorage.setItem("popup", 1);
+            $("#fpopup").toggle("slide").css("visibility", "visible");
+        });
+        
         $(document).on("click", "#btfsetsave", function (evt) {
             saveSettings();
             alert("Settings saved!");
