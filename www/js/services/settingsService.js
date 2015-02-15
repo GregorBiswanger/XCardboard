@@ -1,4 +1,4 @@
-var settingsService = function () {
+var settingsService = function ($location) {
 
     var compassAdjustment = getCompassAdjustment();
     var smoothAdjustment = getSmoothAdjustment();
@@ -50,7 +50,7 @@ var settingsService = function () {
     function getPanoramaImage() {
         return "img/panorama.jpg";
     }
-
+	
     return {
         compassAdjustment: compassAdjustment,
         smoothAdjustment: smoothAdjustment,

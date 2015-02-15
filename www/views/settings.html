@@ -18,7 +18,7 @@
             <label>Kompass Einstellung:</label>
             <input type="text" ng-model="settingsService.compassAdjustment" class="form-control" required>
             <br />
-            <a class="btn btn-warning btn-sm btn-block">Eigenes Panorama wählen</a>
+            <a ng-click="onOwnPanoramaTouched()" class="btn btn-warning btn-sm btn-block">Eigenes Panorama wählen</a>
             <a href="#/onlinePanoramas" id="btonpano" class="btn btn-warning btn-sm btn-block">Online herunterladen</a>
             <a ng-click="onGoAmazonTouched()" class="btn btn-success btn-sm btn-block">Cardboard bei Amazon bestellen</a>
         </div>

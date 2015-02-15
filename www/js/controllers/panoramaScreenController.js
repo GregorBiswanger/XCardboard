@@ -25,6 +25,10 @@ var panoramaScreenController = function ($scope, $rootScope, settingsService) {
     $scope.onScreenTouched = function () {
         $rootScope.$broadcast("panoramaScreenTouched", true);
     };
+	
+	$scope.$on("ownPictureChanged", function(value) {
+		$scope.$apply();
+	});
 };
 
 panoramaScreenController.$inject = ["$scope", "$rootScope", "settingsService"];

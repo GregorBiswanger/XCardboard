@@ -6,6 +6,7 @@ app.controller("settingsController", settingsController);
 app.controller("onlinePanoramasController", onlinePanoramasController);
 app.factory("pictureDirectionService", pictureDirectionService);
 app.factory("settingsService", settingsService);
+app.factory("ownPictureService", ownPictureService);
 app.factory("languageService", languageService);
 app.directive('ngLoad', ngLoad);
 
