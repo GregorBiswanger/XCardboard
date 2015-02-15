@@ -1,0 +1,39 @@
+.settingsButton {
+    z-index: 900;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+.settingsPanel {
+    overflow: scroll;
+    z-index: 9000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+}
+input:required:invalid,
+input:focus:invalid {
+    -moz-box-shadow: none;
+    border: 1px solid red;
+}
+.settingsPanel img {
+    width: 150px;
+}
+.slide-animation.ng-hide-add,
+.slide-animation.ng-hide-remove {
+    transition: 0.3s linear all;
+    -webkit-transition: 0.3s linear all;
+    -moz-transition: 0.3s linear all;
+    -o-transition: 0.3s linear all;
+    /* remember to add this */
+    display: block!important;
+    opacity: 1;
+}
+.slide-animation.ng-hide {
+    opacity: 0;
+}
