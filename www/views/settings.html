@@ -12,15 +12,15 @@
                 <img src="img/logo.png">
             </center>
             <br />
-            <label>Smooth Einstellung:</label>
+            <label>{{ "SETTINGS.SMOOTHADJUSTMENT" | translate }}:</label>
             <input type="text" ng-model="settingsService.smoothAdjustment" class="form-control" required>
             <br />
-            <label>Kompass Einstellung:</label>
+            <label>{{ "SETTINGS.COMPASSADJUSTMENT" | translate }}:</label>
             <input type="text" ng-model="settingsService.compassAdjustment" class="form-control" required>
             <br />
-            <a ng-click="onOwnPanoramaTouched()" class="btn btn-warning btn-sm btn-block">Eigenes Panorama wählen</a>
-            <a href="#/onlinePanoramas" id="btonpano" class="btn btn-warning btn-sm btn-block">Online herunterladen</a>
-            <a ng-click="onGoAmazonTouched()" class="btn btn-success btn-sm btn-block">Cardboard bei Amazon bestellen</a>
+            <a ng-click="onOwnPanoramaTouched()" class="btn btn-warning btn-sm btn-block">{{ "SETTINGS.OWNPANORAMABUTTON" | translate }}</a>
+            <a href="#/onlinePanoramas" class="btn btn-warning btn-sm btn-block">{{ "SETTINGS.ONLINEPANORAMASBUTTON" | translate }}</a>
+            <a ng-click="onGoAmazonTouched()" class="btn btn-success btn-sm btn-block">{{ "SETTINGS.AMAZONBUTTON" | translate }}</a>
         </div>
     </div>
 </div>

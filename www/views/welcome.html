@@ -9,9 +9,9 @@
         </div>
         <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-6">
             <a ng-click="onGoAmazonTouched()" class="btn btn-success btn-block btn-lg">{{ "WELCOME.AMAZONBUTTON " | translate }}</a>
-            <a href="#/panoramaScreen" class="btn btn-danger btn-block">Weiter <span class="glyphicon glyphicon-chevron-right "></span></a>
+            <a href="#/panoramaScreen" class="btn btn-danger btn-block">{{ "WELCOME.NEXTBUTTON " | translate }} <span class="glyphicon glyphicon-chevron-right "></span></a>
             <br />
-            <input type="checkbox" ng-model="settingsService.userHaveCardboard" />&nbsp;Ich habe ein Cardboard.
+            <input type="checkbox" ng-model="settingsService.userHaveCardboard" />&nbsp;{{ "WELCOME.USERHAVECARDBOARDBUTTON " | translate }}
         </div>
     </div>
 </div>
