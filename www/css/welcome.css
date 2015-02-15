@@ -1,0 +1,16 @@
+.welcome {
+    overflow: scroll;
+    z-index: 9002;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.welcome div {
+    padding: 10px;
+}
+.welcome img {
+    width: 150px;
+}

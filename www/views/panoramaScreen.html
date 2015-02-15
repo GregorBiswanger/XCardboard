@@ -1,0 +1,19 @@
+<div ng-include src="'views/settings.html'"></div>
+
+<div ng-controller="panoramaScreenController" class="panoramaScreen" ng-click="onScreenTouched()">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0;">
+        <img ng-style="panoramaStyle()">
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0;">
+        <img ng-style="panoramaStyle()">
+    </div>
+
+    <!-- Background-Image löst kein Load-Event. Dies ist ein Workaround dafür. -->
+    <img class="hiddenLoadEventImage" src="{{settingsService.panoramaImage}}" ng-load="imageLoadCompleted()">
+
+    <div ng-show="isImageLoading" class="alert alert-warning panoramaScreenLoading">
+        <center>
+            <b>Bitte warten...</b>
+        </center>
+    </div>
+</div>

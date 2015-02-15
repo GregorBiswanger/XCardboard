@@ -1,177 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 
 <head>
     <title>XCardboard</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/panoramaScreen.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/onlinePanoramas.css">
     <style>
-        .pano * {
-            transition: 0.9s ease;
-            transform: translate3d(0, 0, 0);
-        }
         b {
             word-wrap: break-word;
-        }
-
-        @media screen and (min-device-height: 850px) and (orientation: landscape) {
-            .screen {
-                width: 80%;
-                margin-left: auto;
-                margin-right: auto;
-            }
         }
     </style>
 </head>
 
 <body>
-    <div class="screen">
-        <div id="fpopup" class="" style="visibilty: hidden; overflow: scroll; z-index: 9002; position: absolute; top:0; left:0; width: 100%; height:100%; background-color: #fff;">
-            <div style="padding: 10px;">
-                <center><img src="img/logo.png" style="width:150px;">
-                    <h2>Willkommen bei XCardboard!</h2>
-                    <p>Das Google Cardboard ist eine Virtuell Reality–Brille aus Pappe. Der Karton ist einfach zusammen zu bauen und ein Ringmagnet sorgt für die nötige Stabilität. In Kombination mit einem Smartphone wird das Cardboard zur ultimativen Virtuell Reality Expierience. Das Gehäuse ist so konstruiert, dass das Smartphone darin platziert werden kann, ohne herauszufallen. Ein Klettverschluss-Streifen sowie ein gewöhnliches Gummiband sorgen für einen festen Halt. Durch die von Google genutzten bikonvexe – Linsen und der Nutzung spezieller Apps, wird der Bildschirm des Phones zu einem faszinierenden, dreidimensionalen VR-Display.</p>
-                    <p><br /></p>
-                    <p><a id="btgoamazon" href="#" class="btn btn-success btn-block btn-lg">Bei Amazon bestellen - 12,99€</a></p>
-                    <p><br /></p>
-                    <p>Falls Sie bereits einen Google Cardboard Viewer besitzen könnnen Sie dieses Fenster hier schließen und nicht mehr anzeigen lassen:</p>
-                    <p><a href="#" id="btclosepopup" class="btn btn-danger btn-block">Fenster schließen</a></p>
-                    <p><a href="#" id="btclosenoshowpopup" class="btn btn-danger btn-block">Fenster schließen<br />und nicht mehr anzeigen</a></p>
-            </div>
-        </div>
-        
-        <div id="btfset" class="" style="visibilty: hidden; overflow: hidden; z-index: 900; position: absolute; top:0; right:0; padding-top:20px; padding-right: 10px;">
-            <button type="button" class="btn btn-default">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            </button>
-        </div>
+    <div ng-view></div>
 
-        <div id="load" class="alert alert-warning" style="visibilty: hidden; position: absolute; top:50%; left:50%; width: 150px; height:54px;margin-top: -27px; margin-left: -75px; z-index: 999999;">
-            <center>
-                <b>Bitte warten...</b>
-            </center>
-        </div>
-
-        <div id="fset" class="" style="visibilty: hidden; overflow: scroll; z-index: 9000; position: absolute; top:0; right:0; width: 250px; height:100%; background-color: #fff;">
-            <div style="padding: 10px;">
-                <br />
-                <center><img src="img/logo.png" style="width:150px;">
-                </center>
-                <br />
-                <label for="tbSA">Smooth Einstellung:</label>
-                <input type="text" id="tbSA" class="form-control">
-                <br />
-                <label for="tbCA">Kompass Einstellung:</label>
-                <input type="text" id="tbCA" class="form-control">
-                <br />
-                <a href="#" id="btchpano" class="btn btn-warning btn-sm btn-block">Eigenes Panorama wählen</a>
-                <a href="#" id="btonpano" class="btn btn-warning btn-sm btn-block">Online herunterladen</a>
-                <a href="#" id="btgoamazon" class="btn btn-success btn-sm btn-block">Cardboard bei Amazon bestellen</a>
-                <!--
-                <br />
-                <br />
-                <a href="#" id="btfsetsave" class="btn btn-success">Save</a>
-                <a href="#" id="btfset" class="btn btn-primary">Close</a>
-              <br /><br />
--->
-            </div>
-        </div>
-
-        <div id="fonpano" class="" style="visibilty: hidden; overflow: scroll; z-index: 9001; position: absolute; top:0; left:0; width: 100%; height:100%; background-color: #fff;">
-            <div style="padding: 10px;">
-                <div class="row" styel="word-wrap: break-word;">
-                    
-                <div class="col-xs-6 col-md-4">
-                <a href="#http://pixeldraw.de/pano/sfb.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
-                    <img src="http://pixeldraw.de/pano/sfb_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;">
-                    <br />
-                    <b>Golden Gate Bridge<br />
-                    San Francisco </b>
-                </a>
-                <br />
-                </div>
-
-                <div class="col-xs-6 col-md-4">
-                <a href="#http://pixeldraw.de/pano/europabruecke.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
-                    <img src="http://pixeldraw.de/pano/europabruecke_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;">
-                    <br />
-                    <b>Europabrücke<br />
-                        Deutschland</b>
-                </a>
-                <br />
-                </div>
-                        
-                <div class="col-xs-6 col-md-4">
-                <a href="#http://pixeldraw.de/pano/ingame.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
-                    <img src="http://pixeldraw.de/pano/ingame_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;">
-                    <br />
-                    <b>in Game<br />
-                    Panorama</b>
-                </a>
-                <br />
-                </div>
-                        
-                <div class="col-xs-6 col-md-4">
-                <a href="#http://pixeldraw.de/pano/duesseldorf.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
-                    <img src="http://pixeldraw.de/pano/duesseldorf_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;">
-                    <br />
-                    <b>Düsseldorf Bilk<br />
-                    Deutschland</b>
-                </a>
-                <br />
-                </div>
-                        
-                <div class="col-xs-6 col-md-4">
-                <a href="#http://pixeldraw.de/pano/wildkogel.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
-                    <img src="http://pixeldraw.de/pano/wildkogel_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;">
-                    <br />
-                    <b>Wildkogel<br />
-                    Kitzbüheler Alpen</b>
-                </a>
-                <br />
-                </div>
-                                            
-                <div class="col-xs-6 col-md-4">
-                <a href="#http://pixeldraw.de/pano/skylinemun.jpg" id="btsfb" class="btn btn-warning btn-sm btn-block">
-                    <img src="http://pixeldraw.de/pano/skylinemun_thumb.jpg" width="100%" height="50px" style="padding-bottom:5px;">
-                    <br />
-                    <b>Skyline<br />
-                    Münschen</b>
-                </a>
-                <br />
-                </div>
-                    
-                    
-                </div>
-                <br />
-                <a href="#" id="btonpano" class="btn btn-primary btn-block">Schließen</a>
-                <br />
-                <br />
-            </div>
-        </div>
-
-        <div class="pano" style="z-index: 800;">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0;">
-                <img id="leftScreen" width="100%" style="background-image: url(img/panorama.jpg); background-size: 4625px 774px; background-position: 0px 470px;">
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0;">
-                <img id="rightScreen" width="100%" style="background-image: url(img/panorama.jpg); background-size: 4625px 774px; background-position: 0px 470px;">
-            </div>
-        </div>
-    </div>
-    <label id="output"></label>
-    <!--
-<audio autoplay="autoplay">
-    <source src="sound/park.mp3" type="audio/mpeg">
-</audio>
--->
-
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/angular-translate.min.js"></script>
+    <script src="js/angular-translate-loader-static-files.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="intelxdk.js"></script>
     <script src="cordova.js"></script>
     <script src="xhr.js"></script>
+    <script src="js/services/pictureDirectionService.js"></script>
+    <script src="js/services/settingsService.js"></script>
+    <script src="js/services/languageService.js"></script>
+    <script src="js/controllers/welcomeController.js"></script>
+    <script src="js/controllers/panoramaScreenController.js"></script>
+    <script src="js/controllers/settingsController.js"></script>
+    <script src="js/controllers/onlinePanoramasController.js"></script>
+    <script src="js/directives/ngLoad.js"></script>
     <script src="js/app.js"></script>
     <script>
         function onDeviceReady() {
@@ -182,36 +48,34 @@
                 if (intel.xdk.device.hideSplashScreen)
                     intel.xdk.device.hideSplashScreen();
             }
-
-            app().initialize();
         }
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        function onCamSuccess(evt) {
-            if (evt.success == true) {
-                $("#fset").fadeOut();
-                $("#load").show("slide").css("visibility", "visible");
-
-                var image = document.createElement('img');
-                image.src = intel.xdk.camera.getPictureURL(evt.filename);
-                image.id = evt.filename;
-
-                var picurl = image.src;
-                $("#leftScreen").css({
-                    "background-image": "url(" + picurl + ")"
-                });
-                $("#rightScreen").css({
-                    "background-image": "url(" + picurl + ")"
-                });
-
-                setTimeout(function () {
-                    $("#load").hide("slide");
-                }, 3000);
-            }
-        }
-        document.addEventListener("intel.xdk.camera.picture.add", onCamSuccess);
-        document.addEventListener("intel.xdk.camera.picture.busy", onCamSuccess);
-        document.addEventListener("intel.xdk.camera.picture.cancel", onCamSuccess);
+         //        function onCamSuccess(evt) {
+         //            if (evt.success == true) {
+         //                $("#fset").fadeOut();
+         //                $("#load").show("slide").css("visibility", "visible");
+         //
+         //                var image = document.createElement('img');
+         //                image.src = intel.xdk.camera.getPictureURL(evt.filename);
+         //                image.id = evt.filename;
+         //
+         //                var picurl = image.src;
+         //                $("#leftScreen").css({
+         //                    "background-image": "url(" + picurl + ")"
+         //                });
+         //                $("#rightScreen").css({
+         //                    "background-image": "url(" + picurl + ")"
+         //                });
+         //
+         //                setTimeout(function () {
+         //                    $("#load").hide("slide");
+         //                }, 3000);
+         //            }
+         //        }
+         //        document.addEventListener("intel.xdk.camera.picture.add", onCamSuccess);
+         //        document.addEventListener("intel.xdk.camera.picture.busy", onCamSuccess);
+         //        document.addEventListener("intel.xdk.camera.picture.cancel", onCamSuccess);
     </script>
 </body>
 

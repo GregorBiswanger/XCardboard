@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "5d87cbe7-229a-467f-afd8-ea947e956f3b",
-      "lastModifiedDate": 1423164600421,
+      "lastModifiedDate": 1424012335980,
       "creationDate": 1423163447629
     },
     "XDK-app-designer": "false",
@@ -32,7 +32,15 @@
     ],
     "serviceMethods": [],
     "cordovaPluginsDirectory": "plugins",
-    "cordovaPlugins": [],
+    "cordovaPlugins": [
+      {
+        "id": "org.apache.cordova.globalization",
+        "version": "0.2.7",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {}
+      }
+    ],
     "buildConfigurations": {
       "Android": {
         "platform_": "android",

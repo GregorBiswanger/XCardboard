@@ -1,150 +1,51 @@
-var app = function () {
-    var initialize = function () {
+var app = angular.module("app", ["ngRoute", "ngAnimate", "pascalprecht.translate"]);
 
-        var lsCA = 6;
-        var lsSPopUP = 0;
+app.controller("welcomeController", welcomeController);
+app.controller("panoramaScreenController", panoramaScreenController);
+app.controller("settingsController", settingsController);
+app.controller("onlinePanoramasController", onlinePanoramasController);
+app.factory("pictureDirectionService", pictureDirectionService);
+app.factory("settingsService", settingsService);
+app.factory("languageService", languageService);
+app.directive('ngLoad', ngLoad);
 
-        function loadSettings() {
-            $("#tbCA").val(localStorage.getItem("ca"));
-            $("#tbSA").val(localStorage.getItem("sa"));
-            lsSPopUP = parseInt(localStorage.getItem("popup"));
+app.config(function ($routeProvider, $compileProvider) {
+    $routeProvider.when("/", {
+        controller: welcomeController,
+        templateUrl: "views/welcome.html"
+    }).when("/panoramaScreen", {
+        controller: panoramaScreenController,
+        templateUrl: "views/panoramaScreen.html"
+    }).when("/onlinePanoramas", {
+        controller: onlinePanoramasController,
+        templateUrl: "views/onlinePanoramas.html"
+    }).otherwise({
+        redirectTo: "views/welcome.html"
+    });
 
-            if ($("#tbCA").val() == "")
-                $("#tbCA").val(6);
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+});
 
-            if ($("#tbSA").val() == "")
-                $("#tbSA").val(0.9);
+app.config(function ($translateProvider) {
 
-            lsCA = parseInt($("#tbCA").val());
-            $(".pano").css("transition", $("#tbSA").val() + "s ease");
-            
-            if(lsSPopUP == 1)
-                $("#fpopup").hide();
+    $translateProvider.translations("en", {
+        WELCOME: {
+            DESCRIPTION: "Das Google Cardboard ist eine Virtuell Reality–Brille aus Pappe. In Kombination mit einem Smartphone wird das Cardboard zur ultimativen Virtuell Reality Expierience. Durch die von Google genutzten bikonvexe – Linsen und der Nutzung spezieller Apps, wird der Bildschirm des Phones zu einem faszinierenden, dreidimensionalen VR-Display.",
+            AMAZONBUTTON: "Cardboard auf Amazon"
         }
+    });
 
-        function saveSettings() {
-            localStorage.setItem("ca", $("#tbCA").val());
-            localStorage.setItem("sa", $("#tbSA").val());
+    $translateProvider.useStaticFilesLoader({
+        prefix: '/translations/lang-',
+        suffix: '.json'
+    });
 
-            lsCA = parseInt($("#tbCA").val());
-            $(".pano").css("transition", $("#tbSA").val() + "s ease");
-        }
+    $translateProvider.preferredLanguage("en");
+});
 
-        $("#fonpano").hide();
-        $("#fset").hide();
-        $("#load").hide();        
-        loadSettings();
-
-        $(document).on("click", "#btgoamazon", function (evt) {
-            intel.xdk.device.launchExternal("http://www.amazon.de/gp/product/B00NF8PO4G/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B00NF8PO4G&linkCode=as2&tag=doblne-21&linkId=AJGHZL57FNTE6DMQ");
-        });
-        
-        $(document).on("click", "#btclosepopup", function (evt) {
-            $("#fpopup").toggle("slide").css("visibility", "visible");
-        });
-        
-        $(document).on("click", "#btclosenoshowpopup", function (evt) {
-            localStorage.setItem("popup", 1);
-            $("#fpopup").toggle("slide").css("visibility", "visible");
-        });
-        
-        $(document).on("click", "#btfsetsave", function (evt) {
-            saveSettings();
-            alert("Settings saved!");
-            $("#fset").toggle("slide").css("visibility", "visible");
-        });
-
-        $(document).on("click", "#btfset", function (evt) {
-            $("#fset").toggle("slide").css("visibility", "visible");
-        });
-
-        $(document).on("click", "#btchpano", function (evt) {
-            intel.xdk.camera.importPicture();
-        });
-
-        $(document).on("click", "#btonpano", function (evt) {
-            $("#fonpano").toggle("slide").css("visibility", "visible");
-        });
-
-        $(document).on("click", "#btsfb", function (evt) {
-            $("#load").show("slide").css("visibility", "visible");
-
-            var href = $(this).attr('href');
-            var link = href.replace("#", "");
-
-            $("#leftScreen").css({
-                "background-image": "url(" + link + ")"
-            });
-            $("#rightScreen").css({
-                "background-image": "url(" + link + ")"
-            });
-
-            $("#fonpano").toggle("slide").css("visibility", "visible");
-            $("#fset").toggle("slide").css("visibility", "visible");
-
-            setTimeout(function () {
-                $("#load").hide("slide");
-            }, 5000);
-        });
-
-
-        $(document).on("click", ".pano", function (evt) {
-            saveSettings();
-            $("#fset").fadeOut();
-        });
-
-        $("#leftScreen").css("height", window.innerHeight - 20);
-        $("#rightScreen").css("height", window.innerHeight - 20);
-
-        var oldMH = 0;
-
-        function onSuccess(heading) {
-            var pictureWidth = 4625;
-
-            var rest = heading.magneticHeading - oldMH;
-
-            $("#output").html(heading.magneticHeading + " old: " + oldMH + " cs:" + lsCA);
-
-            if (rest >= lsCA || rest <= -lsCA) {
-                var picturePosition = Math.round(pictureWidth / 360 * heading.magneticHeading);
-
-                $("#leftScreen").css("background-position", "-" + picturePosition + "px 470px");
-                $("#rightScreen").css("background-position", "-" + picturePosition + "px 470px");
-
-                oldMH = heading.magneticHeading;
-                lastPicturePosition = picturePosition;
-            }
-        }
-
-        function onError(compassError) {
-            //alert('Compass error: ' + compassError.code);
-        }
-
-        var options = {
-            frequency: 50
-        };
-
-        navigator.compass.watchHeading(onSuccess, onError, options);
-        // detect device height for media queries
-        // alert(screen.height);
-
-        function onAccelerationSuccess(acceleration) {
-
-            //            $("#output").text('Acceleration X: ' + acceleration.x + '\n' +
-            //                'Acceleration Y: ' + acceleration.y.toFixed(2) + '\n' +
-            //                'Acceleration Z: ' + acceleration.z + '\n' +
-            //                'Timestamp: ' + acceleration.timestamp + '\n');
-        }
-
-        var optionsAcceleration = {
-            frequency: 50
-        };
-
-        navigator.accelerometer.watchAcceleration(onAccelerationSuccess, onError, optionsAcceleration);
-
-    };
-
-    return {
-        initialize: initialize
-    };
-};
+app.run(function ($document, $rootScope, pictureDirectionService, languageService) {
+    $document.on("deviceready", function () {
+        //languageService.setGermanIfAvailable();
+        pictureDirectionService.initialize();
+    });
+});

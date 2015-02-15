@@ -1,0 +1,26 @@
+<div ng-controller="settingsController">
+    <div class="settingsButton">
+        <button type="button" class="btn btn-default" ng-click="onOpenSettingsTouched()">
+            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <div ng-show="isSettingsPanelOpen" class="settingsPanel slide-animation">
+        <div style="padding: 10px;">
+            <br />
+            <center>
+                <img src="img/logo.png">
+            </center>
+            <br />
+            <label>Smooth Einstellung:</label>
+            <input type="text" ng-model="settingsService.smoothAdjustment" class="form-control" required>
+            <br />
+            <label>Kompass Einstellung:</label>
+            <input type="text" ng-model="settingsService.compassAdjustment" class="form-control" required>
+            <br />
+            <a class="btn btn-warning btn-sm btn-block">Eigenes Panorama wählen</a>
+            <a href="#/onlinePanoramas" id="btonpano" class="btn btn-warning btn-sm btn-block">Online herunterladen</a>
+            <a ng-click="onGoAmazonTouched()" class="btn btn-success btn-sm btn-block">Cardboard bei Amazon bestellen</a>
+        </div>
+    </div>
+</div>
