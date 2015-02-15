@@ -2,7 +2,7 @@ var welcomeController = function ($scope, $location, settingsService) {
 
     $scope.settingsService = settingsService;
 
-    if (settingsService.userHaveCardboard === true) {
+    if (settingsService.userHaveCardboard === "true") {
         $location.path("/panoramaScreen");
     }
 
