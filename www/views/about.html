@@ -60,6 +60,15 @@
 		<a ng-click="onNavigateExternURLTouched('https://github.com/GregorBiswanger/XCardboard')" class="btn btn-block btn-link">https://github.com/GregorBiswanger/XCardboard</a>
 		
 		<br /><br />
+		
+		<p class="bg-primary" style="padding: 10px;">{{ "ABOUT.DONATE" | translate }}</p>
+		<div class="alert alert-warning" role="alert">
+            {{ "ABOUT.DONATEINFO" | translate }}
+        </div>
+		<div class="text-center">
+		<a ng-click="onNavigateExternURLTouched('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3S3HSYJEH8VAQ')"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"></a>
+		</div>	
+		<br /><br />
         <a href="#/panoramaScreen" class="btn btn-primary btn-block btn-lg">Zurück <span class="glyphicon glyphicon-chevron-right "></span></a>
     </div>
 </div>
