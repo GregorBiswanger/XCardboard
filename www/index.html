@@ -10,11 +10,6 @@
     <link rel="stylesheet" href="css/settings.css">
     <link rel="stylesheet" href="css/welcome.css">
     <link rel="stylesheet" href="css/onlinePanoramas.css">
-    <style>
-        b {
-            word-wrap: break-word;
-        }
-    </style>
 </head>
 
 <body>
@@ -33,7 +28,7 @@
     <script src="js/services/pictureDirectionService.js"></script>
     <script src="js/services/settingsService.js"></script>
     <script src="js/services/languageService.js"></script>
-	<script src="js/services/ownPictureService.js"></script>
+    <script src="js/services/ownPictureService.js"></script>
     <script src="js/controllers/welcomeController.js"></script>
     <script src="js/controllers/panoramaScreenController.js"></script>
     <script src="js/controllers/settingsController.js"></script>
@@ -51,32 +46,6 @@
             }
         }
         document.addEventListener("deviceready", onDeviceReady, false);
-
-         //        function onCamSuccess(evt) {
-         //            if (evt.success == true) {
-         //                $("#fset").fadeOut();
-         //                $("#load").show("slide").css("visibility", "visible");
-         //
-         //                var image = document.createElement('img');
-         //                image.src = intel.xdk.camera.getPictureURL(evt.filename);
-         //                image.id = evt.filename;
-         //
-         //                var picurl = image.src;
-         //                $("#leftScreen").css({
-         //                    "background-image": "url(" + picurl + ")"
-         //                });
-         //                $("#rightScreen").css({
-         //                    "background-image": "url(" + picurl + ")"
-         //                });
-         //
-         //                setTimeout(function () {
-         //                    $("#load").hide("slide");
-         //                }, 3000);
-         //            }
-         //        }
-         //        document.addEventListener("intel.xdk.camera.picture.add", onCamSuccess);
-         //        document.addEventListener("intel.xdk.camera.picture.busy", onCamSuccess);
-         //        document.addEventListener("intel.xdk.camera.picture.cancel", onCamSuccess);
     </script>
 </body>
 
