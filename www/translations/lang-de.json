@@ -1,7 +1,36 @@
 {
     "WELCOME": {
         "DESCRIPTION": "Das Google Cardboard ist eine Virtuell Reality–Brille aus Pappe. In Kombination mit einem Smartphone wird das Cardboard zur ultimativen Virtuell Reality Expierience. Durch die von Google genutzten bikonvexe – Linsen und der Nutzung spezieller Apps, wird der Bildschirm des Phones zu einem faszinierenden, dreidimensionalen VR-Display.",
-        "AMAZONBUTTON": "Cardboard auf Amazon"
+        "AMAZONBUTTON": "Cardboard auf Amazon",
+		"NEXTBUTTON": "Weiter",
+		"USERHAVECARDBOARDBUTTON": "Ich habe ein Cardboard." 
+
+    },
+	 "PANORAMASCREEN": {
+        "WAITDIALOG": "Bitte warten..."
+    },
+    "SETTINGS": {
+        "SMOOTHADJUSTMENT": "Smooth Einstellung",
+        "COMPASSADJUSTMENT": "Kompass Einstellung",
+        "OWNPANORAMABUTTON": "Eigenes Panorama wählen",
+        "ONLINEPANORAMASBUTTON": "Online herunterladen",
+        "AMAZONBUTTON": "Cardboard bei Amazon bestellen",
+		ABOUTBUTTON: "Über XCardboard"
+    },
+    "ONLINEPANORAMA": {
+        "PICTUREONETITLE": "Golden Gate Bridge",
+        "PICTUREONESUBTITLE": "San Francisco",
+        "PICTURETWOTITLE": "Europabrücke",
+        "PICTURETWOSUBTITLE": "Deutschland",
+        "PICTURETHREETITLE": "In Game",
+        "PICTURETHREESUBTITLE": "Panorama",
+        "PICTUREFOURTITLE": "Düsseldorf Bilk",
+        "PICTUREFOURSUBTITLE": "Deutschland",
+        "PICTUREFIVETITLE": "Wildkogel",
+        "PICTUREFIVESUBTITLE": "Kitzbüheler Alpen",
+        "PICTURESIXTITLE": "Skyline",
+        "PICTURESIXSUBTITLE": "Münschen",
+        "BACKBUTTON": "Zurück"
     },
 	"ABOUT": {
 		"DESCRIPTION": "XCardboard ist ein kleines Projekt für die Google Virtuell Reality Brille Cardboard. Entwickelt wurde diese App mit dem Intel XDK, AngularJS sowie Twitter Bootstrap 3. Anreit war es eine Cross Plattform App zu entwickeln die auf jedem modernen Smartphone funktioniert. Leider bietet Google im Augenblick nur Apps für Android an, da wir jedoch so fasziniert von dem Google Cardboard sind, mussten wir einfach eine App für alle Entwickeln! Diese App ist OpenSource und wird über Github veröffentlicht und gepflegt.",
