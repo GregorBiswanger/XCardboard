@@ -15,7 +15,7 @@
         "OWNPANORAMABUTTON": "Eigenes Panorama wählen",
         "ONLINEPANORAMASBUTTON": "Online herunterladen",
         "AMAZONBUTTON": "Cardboard bei Amazon bestellen",
-		ABOUTBUTTON: "Über XCardboard"
+		"ABOUTBUTTON": "Über XCardboard"
     },
     "ONLINEPANORAMA": {
         "PICTUREONETITLE": "Golden Gate Bridge",
