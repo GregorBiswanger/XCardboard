@@ -1,0 +1,16 @@
+.about {
+    overflow: scroll;
+    z-index: 9002;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.about div {
+    padding: 10px;
+}
+.about img {
+    width: 150px;
+}
