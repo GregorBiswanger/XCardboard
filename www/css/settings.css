@@ -15,6 +15,7 @@
     width: 250px;
     height: 100%;
     background-color: #fff;
+    transform: translate3d(0, 0, 0);
 }
 input:required:invalid,
 input:focus:invalid {
@@ -26,14 +27,20 @@ input:focus:invalid {
 }
 .slide-animation.ng-hide-add,
 .slide-animation.ng-hide-remove {
-    transition: 0.3s linear all;
-    -webkit-transition: 0.3s linear all;
-    -moz-transition: 0.3s linear all;
-    -o-transition: 0.3s linear all;
-    /* remember to add this */
-    display: block!important;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition-duration: .25s;
     opacity: 1;
 }
 .slide-animation.ng-hide {
+    -webkit-transform: translate3d(250px, 0, 0);
+    -moz-transform: translate3d(250px, 0, 0);
+    -ms-transform: translate3d(250px, 0, 0);
+    -o-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px, 0, 0);
+    transition-duration: .25s;
     opacity: 0;
 }
