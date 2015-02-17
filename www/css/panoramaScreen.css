@@ -1,3 +1,8 @@
+/* disable the web bounce effect on Windows Phone */
+
+.panoramaScreen {
+    -ms-touch-action: none;
+}
 .panoramaScreen img {
     width: 100%;
 }

@@ -15,7 +15,7 @@ var pictureDirectionService = function ($rootScope, settingsService) {
 
     var onError = function (compassError) {
         // TODO: Debug Mode and check of Sensor availible
-        // alert('Compass error: ' + compassError.code);
+        //alert('Compass error: ' + compassError.code);
     };
 
     var options = {

@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "5d87cbe7-229a-467f-afd8-ea947e956f3b",
-      "lastModifiedDate": 1424012335980,
+      "lastModifiedDate": 1424196855975,
       "creationDate": 1423163447629
     },
     "XDK-app-designer": "false",
@@ -36,6 +36,13 @@
       {
         "id": "org.apache.cordova.globalization",
         "version": "0.2.7",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.device-orientation",
+        "version": "0.3.6",
         "selectedState": "Included",
         "data": {},
         "paramvals": {}
