@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "5d87cbe7-229a-467f-afd8-ea947e956f3b",
-      "lastModifiedDate": 1424012335980,
+      "lastModifiedDate": 1424201905988,
       "creationDate": 1423163447629
     },
     "XDK-app-designer": "false",
@@ -39,6 +39,13 @@
         "selectedState": "Included",
         "data": {},
         "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.device-orientation",
+        "version": "0.3.6",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {}
       }
     ],
     "buildConfigurations": {
@@ -57,16 +64,98 @@
         "appName_": "XCardboard",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": "*",
-        "icons_": [],
-        "splashes_": [],
+        "icons_": [
+          {
+            "relPath": "assets/android/32x32.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "assets/android/48x48.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "assets/android/72x72.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "assets/android/96x96.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "assets/android/426x320.png",
+            "density": "ldpi",
+            "height": 320,
+            "width": 426,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "assets/android/470x320.png",
+            "density": "mdpi",
+            "height": 320,
+            "width": 470,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "assets/android/640x480.png",
+            "density": "hdpi",
+            "height": 480,
+            "width": 640,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "assets/android/960x720.png",
+            "density": "xhdpi",
+            "height": 720,
+            "width": 960,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "assets/android/320x426.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/android/320x470.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/android/480x640.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/android/720x960.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          }
+        ],
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "cordovaCLIVersion_": "3.5",
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
-        "appDescription_": "Use this template to start with a simple index.html file for creating mobile apps.",
-        "appAuthor_": "",
+        "appDescription_": "XCardboard is a Hybrid-App sample for Googles Cardboard based on Apache Cordova and coded with Intel XDK.",
+        "appAuthor_": "Gregor Biswanger, Christine Krupinski, Patrick Herting",
         "appVersionCode_": "1"
       },
       "Android-Crosswalk": {
@@ -84,16 +173,98 @@
         "appName_": "XCardboard",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": "*",
-        "icons_": [],
-        "splashes_": [],
+        "icons_": [
+          {
+            "relPath": "assets/android/32x32.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "assets/android/48x48.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "assets/android/72x72.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "assets/android/96x96.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "assets/android/320x426.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/android/320x470.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/android/480x640.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/android/720x960.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/android/426x320.png",
+            "density": "ldpi",
+            "height": 320,
+            "width": 426,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "assets/android/470x320.png",
+            "density": "mdpi",
+            "height": 320,
+            "width": 470,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "assets/android/640x480.png",
+            "density": "hdpi",
+            "height": 480,
+            "width": 640,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "assets/android/960x720.png",
+            "density": "xhdpi",
+            "height": 720,
+            "width": 960,
+            "orientation": "landscape"
+          }
+        ],
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "cordovaCLIVersion_": "3.5",
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
-        "appDescription_": "Use this template to start with a simple index.html file for creating mobile apps.",
-        "appAuthor_": "",
+        "appDescription_": "XCardboard is a Hybrid-App sample for Googles Cardboard based on Apache Cordova and coded with Intel XDK.",
+        "appAuthor_": "Gregor Biswanger, Christine Krupinski, Patrick Herting",
         "appVersionCode_": "1"
       },
       "iOS": {
@@ -110,15 +281,109 @@
         "appName_": "XCardboard",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": "*",
-        "icons_": [],
-        "splashes_": [],
+        "icons_": [
+          {
+            "relPath": "assets/ios/180x180.png",
+            "height": 180,
+            "width": 180
+          },
+          {
+            "relPath": "assets/ios/120x120.png",
+            "height": 120,
+            "width": 120
+          },
+          {
+            "relPath": "assets/ios/60x60.png",
+            "height": 60,
+            "width": 60
+          },
+          {
+            "relPath": "assets/ios/152x152.png",
+            "height": 152,
+            "width": 152
+          },
+          {
+            "relPath": "assets/ios/76x76.png",
+            "height": 76,
+            "width": 76
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "assets/ios/750x1334.png",
+            "height": 1334,
+            "width": 750,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/ios/1242x2208.png",
+            "height": 2208,
+            "width": 1242,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/ios/640x1136.png",
+            "height": 1136,
+            "width": 640,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/ios/640x960.png",
+            "height": 960,
+            "width": 640,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/ios/320x480.png",
+            "height": 480,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/ios/1536x2008.png",
+            "height": 2008,
+            "width": 1536,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/ios/768x1004.png",
+            "height": 1004,
+            "width": 768,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "assets/ios/1334x750.png",
+            "height": 750,
+            "width": 1334,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "assets/ios/2208x1242.png",
+            "height": 1242,
+            "width": 2208,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "assets/ios/2048x1496.png",
+            "height": 1496,
+            "width": 2048,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "assets/ios/1024x748.png",
+            "height": 748,
+            "width": 1024,
+            "orientation": "landscape"
+          }
+        ],
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "cordovaCLIVersion_": "3.5",
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
-        "appDescription_": "Use this template to start with a simple index.html file for creating mobile apps."
+        "appDescription_": "XCardboard is a Hybrid-App sample for Googles Cardboard based on Apache Cordova and coded with Intel XDK.",
+        "appAuthor_": "Gregor Biswanger, Christine Krupinski, Patrick Herting"
       },
       "Windows8": {
         "platform_": "windows8",
@@ -134,15 +399,39 @@
         "appName_": "XCardboard",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": "*",
-        "icons_": [],
-        "splashes_": [],
+        "icons_": [
+          {
+            "relPath": "assets/windows/30x30.png",
+            "height": 30,
+            "width": 30
+          },
+          {
+            "relPath": "assets/windows/50x50.png",
+            "height": 50,
+            "width": 50
+          },
+          {
+            "relPath": "assets/windows/150x150.png",
+            "height": 150,
+            "width": 150
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "assets/windows/620x300.png",
+            "height": 300,
+            "width": 620,
+            "orientation": "landscape"
+          }
+        ],
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "cordovaCLIVersion_": "3.5",
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.0.1",
-        "appDescription_": "Use this template to start with a simple index.html file for creating mobile apps."
+        "appDescription_": "XCardboard is a Hybrid-App sample for Googles Cardboard based on Apache Cordova and coded with Intel XDK.",
+        "appAuthor_": "Gregor Biswanger, Christine Krupinski, Patrick Herting"
       },
       "WindowsPhone8": {
         "platform_": "wp8",
