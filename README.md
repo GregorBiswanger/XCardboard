@@ -1,6 +1,6 @@
 ![XCardboard Logo](https://github.com/GregorBiswanger/XCardboard/blob/Developer/Assets/xcardboard_s.png?raw=true)
 
-![XCardboard Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-Install.png?raw=true)
+![XCardboard Screenshot](https://github.com/GregorBiswanger/XCardboard/blob/Developer/Assets/GitHubImages/cross-platform.png?raw=true)
 
 XCardboard is a hybrid app for Google's Cardboard based on Apache Cordova and developed with the Intel XDK. 
 Currently you can view 360° panorama pictures with the Google Cardboard glasses. 
@@ -9,8 +9,7 @@ Like the original Cardboard app for Android, we can implement and improve more f
 
 ### What is Google's Cardboard?
 
-![XCardboard Logo](https://github.com/GregorBiswanger/XCardboard/blob/Developer/www/img/cardboard.gif?raw=true)
-![XCardboard Logo](https://github.com/GregorBiswanger/XCardboard/blob/Developer/www/img/cardboard.gif?raw=true)
+![XCardboard Logo](https://github.com/GregorBiswanger/XCardboard/blob/Developer/Assets/GitHubImages/google-cardboard.png?raw=true)
  
 The Google Cardboard are virtual reality glasses made of? Exactly, it’s made of cardboard. 
 The box is easy to build and a magnetic ring provides the necessary stability. 
@@ -41,7 +40,7 @@ Installation
 --- 
 The app will be published in the different stores soon. We will also publish the exact links to the respective platforms. Who wants to try the app on your own device right now, requires the free app named Intel app Preview. Which is available in every store. If the app is installed you just need to scan the following QR code or open the following link on your Smartphone:
  
-![Intel App Preview QR Code](https://github.com/GregorBiswanger/XCardboard/blob/Developer/www/img/cardboard.gif?raw=true)
+![Intel App Preview QR Code](https://github.com/GregorBiswanger/XCardboard/blob/Developer/Assets/GitHubImages/intel-app-preview-test.png?raw=true)
 
 The Intel app Preview app will start the XCardboard app.
 
