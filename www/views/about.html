@@ -1,74 +1,110 @@
 <div class="about" ng-controller="settingsController">
     <div>
-		<br />
+        <br />
         <center>
             <img src="img/logo.png" width="150px">
         </center>
-		<br />
-		
-		<div class="alert alert-warning" role="alert">
+        <br />
+
+        <div class="alert alert-warning" role="alert">
             {{ "ABOUT.DESCRIPTION" | translate }}
         </div>
-		
-		<p class="bg-primary" style="padding: 10px;">{{ "ABOUT.MADEBY" | translate }}</p>
-		<br />
-		
-		<div class="row text-center">
-			<div class="col-xs-4">
-			   <b>Gregor Biswanger</b>
-				<br />
-				<img src="img/gregor.jpg" width="50%">
-				<br /><br />
-				<a ng-click="onNavigateExternURLTouched('https://www.facebook.com/gregor.biswanger')"><img src="img/fb.png" width="25%"></a> <a ng-click="onNavigateExternURLTouched('https://twitter.com/BFreakout')"><img src="img/twitter.png" width="25%"></a>
-			</div>
-			
-			 <div class="col-xs-4">
-			   <b>Christine Krupinski</b>
-				<br />
-				 <img src="img/christine.jpg" width="50%">
-				 <br /><br />
-				<a ng-click="onNavigateExternURLTouched('https://www.facebook.com/christine.krupinski')"><img src="img/fb.png" width="25%"></a> <a ng-click="onNavigateExternURLTouched('http://twitter.com/GoldTwinkle')"><img src="img/twitter.png" width="25%"></a>
-			</div>
-			
-			<div class="col-xs-4">
-			   <b>Patrick Herting</b>
-				<br />
-				<img src="img/patrick.jpg" width="60%">
-				<br /><br />
-				<a ng-click="onNavigateExternURLTouched('https://www.facebook.com/pherting')"><img src="img/fb.png" width="25%"></a> <a ng-click="onNavigateExternURLTouched('https://twitter.com/pherting')"><img src="img/twitter.png" width="25%"></a>
-			</div>
-		</div>
-		
-		<br /><br />
-		
-		<p class="bg-primary" style="padding: 10px;">{{ "ABOUT.LOGOSTITLE" | translate }}</p>
-		
-		<div class="row text-center">
-			<div class="col-xs-12" style="padding: 10px;"><img src="img/logos/intelxdk.png"></div>
-			<div class="col-xs-12" style="padding: 10px;"><img src="img/logos/cordova.png"></div>
-			<div class="col-xs-12" style="padding: 10px;"><img src="img/logos/angularjs.png"></div>
-			<div class="col-xs-12" style="padding: 10px;"><img src="img/logos/bootstrap.png"></div>
-		</div>
-		<div class="row text-center">
-			<div class="col-xs-6" style="padding: 10px;"><img src="img/logos/html5.png" height="100px"></div>
-			<div class="col-xs-6" style="padding: 10px;"><img src="img/logos/css3.png" height="100px"></div>
-		</div>
-		
-		<br /><br />
-		
-		<p class="bg-primary" style="padding: 10px;">{{ "ABOUT.GITHUB" | translate }}</p>
-		<a ng-click="onNavigateExternURLTouched('https://github.com/GregorBiswanger/XCardboard')" class="btn btn-block btn-link">https://github.com/GregorBiswanger/XCardboard</a>
-		
-		<br /><br />
-		
-		<p class="bg-primary" style="padding: 10px;">{{ "ABOUT.DONATE" | translate }}</p>
-		<div class="alert alert-warning" role="alert">
+
+        <p class="bg-primary" style="padding: 10px;">{{ "ABOUT.MADEBY" | translate }}</p>
+        <br />
+
+        <div class="row text-center">
+            <div class="col-xs-4">
+                <b>Gregor Biswanger</b>
+                <br />
+                <img src="img/gregor.jpg" width="50%">
+                <br />
+                <br />
+                <a ng-click="onNavigateExternURLTouched('https://www.facebook.com/gregor.biswanger')">
+                    <img src="img/fb.png" width="25%">
+                </a>
+                <a ng-click="onNavigateExternURLTouched('https://twitter.com/BFreakout')">
+                    <img src="img/twitter.png" width="25%">
+                </a>
+            </div>
+
+            <div class="col-xs-4">
+                <b>Christine Krupinski</b>
+                <br />
+                <img src="img/christine.jpg" width="50%">
+                <br />
+                <br />
+                <a ng-click="onNavigateExternURLTouched('https://www.facebook.com/christine.krupinski')">
+                    <img src="img/fb.png" width="25%">
+                </a>
+                <a ng-click="onNavigateExternURLTouched('http://twitter.com/GoldTwinkle')">
+                    <img src="img/twitter.png" width="25%">
+                </a>
+            </div>
+
+            <div class="col-xs-4">
+                <b>Patrick Herting</b>
+                <br />
+                <img src="img/patrick.jpg" width="60%">
+                <br />
+                <br />
+                <a ng-click="onNavigateExternURLTouched('https://www.facebook.com/pherting')">
+                    <img src="img/fb.png" width="25%">
+                </a>
+                <a ng-click="onNavigateExternURLTouched('https://twitter.com/pherting')">
+                    <img src="img/twitter.png" width="25%">
+                </a>
+            </div>
+        </div>
+
+        <br />
+        <br />
+
+        <p class="bg-primary" style="padding: 10px;">{{ "ABOUT.LOGOSTITLE" | translate }}</p>
+
+        <div class="row text-center">
+            <div class="col-xs-12" style="padding: 10px;">
+                <img src="img/logos/intelxdk.png">
+            </div>
+            <div class="col-xs-12" style="padding: 10px;">
+                <img src="img/logos/cordova.png">
+            </div>
+            <div class="col-xs-12" style="padding: 10px;">
+                <img src="img/logos/angularjs.png">
+            </div>
+            <div class="col-xs-12" style="padding: 10px;">
+                <img src="img/logos/bootstrap.png">
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-xs-6" style="padding: 10px;">
+                <img src="img/logos/html5.png" height="100px">
+            </div>
+            <div class="col-xs-6" style="padding: 10px;">
+                <img src="img/logos/css3.png" height="100px">
+            </div>
+        </div>
+
+        <br />
+        <br />
+
+        <p class="bg-primary" style="padding: 10px;">{{ "ABOUT.GITHUB" | translate }}</p>
+        <a ng-click="onNavigateExternURLTouched('https://github.com/GregorBiswanger/XCardboard')" class="btn btn-block btn-link">https://github.com/GregorBiswanger/XCardboard</a>
+
+        <br />
+        <br />
+
+        <p class="bg-primary" style="padding: 10px;">{{ "ABOUT.DONATE" | translate }}</p>
+        <div class="alert alert-warning" role="alert">
             {{ "ABOUT.DONATEINFO" | translate }}
         </div>
-		<div class="text-center">
-		<a ng-click="onNavigateExternURLTouched('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3S3HSYJEH8VAQ')"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"></a>
-		</div>	
-		<br /><br />
+        <div class="text-center">
+            <a ng-click="onNavigateExternURLTouched('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3K593FS7SVZTN')">
+                <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!">
+            </a>
+        </div>
+        <br />
+        <br />
         <a href="#/panoramaScreen" class="btn btn-primary btn-block btn-lg">Zurück <span class="glyphicon glyphicon-chevron-right "></span></a>
     </div>
 </div>
