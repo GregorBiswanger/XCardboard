@@ -14,6 +14,21 @@ var panoramaScreenController = function ($scope, $rootScope, settingsService) {
     };
 
     $scope.panoramaStyle = function () {
+
+		var image = new Image();
+		image.onload = function() {
+			return {
+				height: window.innerHeight + "px",
+				backgroundPosition: $scope.picturePosition + 'px 470px',
+				backgroundImage: "url(" + settingsService.panoramaImage + ")",
+				backgroundSize: this.width + "px " + this.height + "px",
+				transition: settingsService.smoothAdjustment + "s ease",
+				transform: "translate3d(0, 0, 0)"
+			};
+		}
+
+		image.src = settingsService.panoramaImage;
+
         return {
             height: window.innerHeight + "px",
             backgroundPosition: $scope.picturePosition + 'px 470px',
