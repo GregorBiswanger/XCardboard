@@ -1,4 +1,4 @@
-![XCardboard Logo](https://github.com/GregorBiswanger/XCardboard/blob/Developer/Assets/xcardboard_s.png?raw=true)
+![XCardboard Logo](https://github.com/GregorBiswanger/XCardboard/blob/Developer/Assets/xcardboard.png?raw=true)
 
 ![XCardboard Screenshot](https://github.com/GregorBiswanger/XCardboard/blob/Developer/Assets/GitHubImages/cross-platform.png?raw=true)
 
@@ -19,7 +19,7 @@ A Velcro closure, as well as an ordinary rubber band provides a firm hold.
 With biconvex-lenses by Google and by using special apps, 
 you can transform the screen of your phone to a fascinating, 3D VR display.
 
-[Google Cardboard](https://www.google.com/get/cardboard)
+[Google Cardboard](https://www.google.com/get/cardboard) || 
 [Google Cardboard auf Amazon](http://www.amazon.de/gp/product/B00NF8PO4G/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B00NF8PO4G&linkCode=as2&tag=doblne-21&linkId=AJGHZL57FNTE6DMQ)
 
 ### What is the motivation behind XCardboard
