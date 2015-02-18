@@ -2,11 +2,11 @@
     "WELCOME": {
         "DESCRIPTION": "Das Google Cardboard ist eine Virtuell Reality–Brille aus Pappe. In Kombination mit einem Smartphone wird das Cardboard zur ultimativen Virtuell Reality Expierience. Durch die von Google genutzten bikonvexe – Linsen und der Nutzung spezieller Apps, wird der Bildschirm des Phones zu einem faszinierenden, dreidimensionalen VR-Display.",
         "AMAZONBUTTON": "Cardboard auf Amazon",
-		"NEXTBUTTON": "Weiter",
-		"USERHAVECARDBOARDBUTTON": "Ich habe ein Cardboard." 
+        "NEXTBUTTON": "Weiter",
+        "USERHAVECARDBOARDBUTTON": "Ich habe ein Cardboard."
 
     },
-	 "PANORAMASCREEN": {
+    "PANORAMASCREEN": {
         "WAITDIALOG": "Bitte warten..."
     },
     "SETTINGS": {
@@ -15,7 +15,7 @@
         "OWNPANORAMABUTTON": "Eigenes Panorama wählen",
         "ONLINEPANORAMASBUTTON": "Online herunterladen",
         "AMAZONBUTTON": "Cardboard bei Amazon bestellen",
-		"ABOUTBUTTON": "Über XCardboard"
+        "ABOUTBUTTON": "Über XCardboard"
     },
     "ONLINEPANORAMA": {
         "PICTUREONETITLE": "Golden Gate Bridge",
@@ -32,12 +32,13 @@
         "PICTURESIXSUBTITLE": "Münschen",
         "BACKBUTTON": "Zurück"
     },
-	"ABOUT": {
-		"DESCRIPTION": "XCardboard ist ein kleines Projekt für die Google Virtuell Reality Brille Cardboard. Entwickelt wurde diese App mit dem Intel XDK, AngularJS sowie Twitter Bootstrap 3. Anreit war es eine Cross Plattform App zu entwickeln die auf jedem modernen Smartphone funktioniert. Leider bietet Google im Augenblick nur Apps für Android an, da wir jedoch so fasziniert von dem Google Cardboard sind, mussten wir einfach eine App für alle Entwickeln! Diese App ist OpenSource und wird über Github veröffentlicht und gepflegt.",
-		"MADEBY": "Entwickelt mit viel ♥ und JavaScript von:",
-		"LOGOSTITLE": "Eingesetzte Technologien:",
-		"GITHUB": "Dokumentation und Sourcecode auf Github:",
-		"DONATE": "Unterstützen Sie XCardboard:",
-		"DONATEINFO": "Jede Spende wird zu 100% für die Entwicklung von XCardboard verwendet. Somit können wir allen Benutzern weitere Features ermöglichen und die fertige App in die Stores verteilen. Helfen Sie uns das Projekt einzigartig zu gestalten! Seien Sie ein Teil davon!"
-	}
+    "ABOUT": {
+        "DESCRIPTION": "XCardboard ist ein kleines Projekt für die Google Virtuell Reality Brille Cardboard. Entwickelt wurde diese App mit dem Intel XDK, AngularJS sowie Twitter Bootstrap 3. Anreit war es eine Cross Plattform App zu entwickeln die auf jedem modernen Smartphone funktioniert. Leider bietet Google im Augenblick nur Apps für Android an, da wir jedoch so fasziniert von dem Google Cardboard sind, mussten wir einfach eine App für alle Entwickeln! Diese App ist OpenSource und wird über Github veröffentlicht und gepflegt.",
+        "MADEBY": "Entwickelt mit viel ♥ und JavaScript von:",
+        "LOGOSTITLE": "Eingesetzte Technologien:",
+        "GITHUB": "Dokumentation und Sourcecode auf Github:",
+        "DONATE": "Unterstützen Sie XCardboard:",
+        "DONATEINFO": "Jede Spende wird zu 100% für die Entwicklung von XCardboard verwendet. Somit können wir allen Benutzern weitere Features ermöglichen und die fertige App in die Stores verteilen. Helfen Sie uns das Projekt einzigartig zu gestalten! Seien Sie ein Teil davon!",
+        BACKBUTTON: "Zurück"
+    }
 }

@@ -38,7 +38,7 @@ can learn it in our project on GitHub. Our open source project is governed by th
  
 Installation
 --- 
-The app will be published in the different stores soon. We will also publish the exact links to the respective platforms. Who wants to try the app on your own device right now, requires the free app named Intel app Preview. Which is available in every store. If the app is installed you just need to scan the following QR code or open the following link on your Smartphone:
+The app will be published in the different stores soon. We will also publish the exact links to the respective platforms. Who wants to try the app on your own device right now, requires the free app named Intel app Preview. Which is available in every store. If the app is installed you just need to scan the following QR code or open the following [link](https://appcenter.html5tools-software.intel.com/mobile/aptest.aspx?APP=7_aiEV8BuyTTCe1JgO4qeP2l-bGmP-xL8In__zi0U_M&PASS=&PKG=QA&REL=4.0.0&SVR=https://appcenter.html5tools-software.intel.com/) on your Smartphone:
  
 ![Intel App Preview QR Code](https://github.com/GregorBiswanger/XCardboard/blob/Developer/Assets/GitHubImages/intel-app-preview-test.png?raw=true)
 
