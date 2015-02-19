@@ -4,7 +4,6 @@
         "AMAZONBUTTON": "Cardboard auf Amazon",
         "NEXTBUTTON": "Weiter",
         "USERHAVECARDBOARDBUTTON": "Ich habe ein Cardboard."
-
     },
     "PANORAMASCREEN": {
         "WAITDIALOG": "Bitte warten..."
@@ -39,6 +38,6 @@
         "GITHUB": "Dokumentation und Sourcecode auf Github:",
         "DONATE": "Unterstützen Sie XCardboard:",
         "DONATEINFO": "Jede Spende wird zu 100% für die Entwicklung von XCardboard verwendet. Somit können wir allen Benutzern weitere Features ermöglichen und die fertige App in die Stores verteilen. Helfen Sie uns das Projekt einzigartig zu gestalten! Seien Sie ein Teil davon!",
-        BACKBUTTON: "Zurück"
+        "BACKBUTTON": "Zurück"
     }
 }

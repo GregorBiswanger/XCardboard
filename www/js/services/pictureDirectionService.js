@@ -6,7 +6,7 @@ var pictureDirectionService = function ($rootScope, settingsService) {
         var rest = heading.magneticHeading - lastMagneticHeading;
 
         if (rest >= settingsService.compassAdjustment || rest <= -settingsService.compassAdjustment) {
-            var picturePosition = Math.round(pictureWidth / 360 * heading.magneticHeading);
+            var picturePosition = Math.abs(Math.round(pictureWidth / 360 * heading.magneticHeading));
             $rootScope.$broadcast("picturePositionChanged", picturePosition);
 
             lastMagneticHeading = heading.magneticHeading;
@@ -19,7 +19,7 @@ var pictureDirectionService = function ($rootScope, settingsService) {
     };
 
     var options = {
-        frequency: 50
+        frequency: 200
     };
 
     var initialize = function () {

@@ -66,12 +66,11 @@ app.config(function ($translateProvider) {
         },
         ABOUT: {
             DESCRIPTION: "XCardboard is a small project for the Google virtual reality glasses named Cardboard. This app has been developed with the Intel XDK, AngularJS as well as Twitter bootstrap 3.  We wanted to develop cross platform application which is running on any modern Smartphone. Unfortunately, Google only offers apps for Android right now. Because we are so fascinated by the Google Cardboard, so we had the idea to develop an app for all platforms! This app is open source and is released and maintained on Github. ",
-
             MADEBY: "Developed with ♥ and JavaScript by:",
             LOGOSTITLE: "Used technologies:",
             GITHUB: "Documentation and sourcecode on Github:",
             DONATE: "Support the XCardboard:",
-            DONATEINFO: " Donations will go directly into store fees and programming. Thus, we can bring more features to all users and distribute the finished app in the stores. We need your help to make the project unique. Be a part of it!",
+            DONATEINFO: "Donations will go directly into store fees and programming. Thus, we can bring more features to all users and distribute the finished app in the stores. We need your help to make the project unique. Be a part of it!",
             BACKBUTTON: "Back"
         }
     });

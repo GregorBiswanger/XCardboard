@@ -7,6 +7,9 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0;">
         <img ng-style="panoramaStyle()">
     </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0;">
+        {{picturePosition}}
+    </div>
 
     <!-- Background-Image löst kein Load-Event. Dies ist ein Workaround dafür. -->
     <img class="hiddenLoadEventImage" src="{{settingsService.panoramaImage}}" ng-load="imageLoadCompleted()">

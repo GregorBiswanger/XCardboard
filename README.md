@@ -53,7 +53,7 @@ Donations
 For further development, we would need support through donations and volunteer developers. 
 Donations will go directly into store fees and programming.
  
-[Help us with PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3K593FS7SVZTN)
+[Help us with PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RE6V9ZZSUV6JC)
 
 
 Contributing
