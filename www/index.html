@@ -36,6 +36,7 @@
     <script src="js/controllers/onlinePanoramasController.js"></script>
     <script src="js/directives/ngLoad.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/GALocalStorage.js"></script>
     <script>
         function onDeviceReady() {
             if (navigator.splashscreen && navigator.splashscreen.hide) {
@@ -47,6 +48,9 @@
             }
         }
         document.addEventListener("deviceready", onDeviceReady, false);
+
+        ga_storage._setAccount('UA-60021650-1');
+        ga_storage._trackPageview('/index.html');
     </script>
 </body>
 
