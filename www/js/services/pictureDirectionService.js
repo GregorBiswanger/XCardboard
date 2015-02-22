@@ -2,7 +2,7 @@ var pictureDirectionService = function ($rootScope, settingsService) {
     var lastMagneticHeading = 0;
 
     var onSuccess = function (heading) {
-        var pictureWidth = 4625;
+        var pictureWidth = $rootScope.imageWidth;
         var rest = heading.magneticHeading - lastMagneticHeading;
 
         if (rest >= settingsService.compassAdjustment || rest <= -settingsService.compassAdjustment) {
@@ -19,7 +19,7 @@ var pictureDirectionService = function ($rootScope, settingsService) {
     };
 
     var options = {
-        frequency: 200
+        frequency: 50
     };
 
     var initialize = function () {

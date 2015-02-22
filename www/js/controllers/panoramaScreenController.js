@@ -19,6 +19,7 @@ var panoramaScreenController = function ($scope, $rootScope, settingsService) {
         var image = new Image();
         image.onload = function () {
             $scope.imageWidth = image.width;
+			$rootScope.imageWidth = image.width;
         };
 
         image.src = settingsService.panoramaImage;
