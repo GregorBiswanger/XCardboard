@@ -1,4 +1,5 @@
 <!-- Change the debuggable preference to true to build a remote CDT debuggable app for -->
 <!-- Crosswalk apps on Android 4.0+ devices and Cordova apps on Android 4.4+ devices. -->
 <preference name="debuggable" value="false" />
+<preference name="orientation" value="landscape"></preference>
 <!-- Change the debuggable preference to false before you build for the store. -->

@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "5d87cbe7-229a-467f-afd8-ea947e956f3b",
-      "lastModifiedDate": 1424201905988,
+      "lastModifiedDate": 1424705044701,
       "creationDate": 1423163447629
     },
     "XDK-app-designer": "false",
@@ -62,7 +62,7 @@
         },
         "isActive_": true,
         "appName_": "XCardboard",
-        "appID_": "xdk.intel.blank.template",
+        "appID_": "webenliven.xcardboard.german",
         "appAccess_": "*",
         "icons_": [
           {
@@ -153,7 +153,7 @@
         "excludedLibraries_": "",
         "cordovaCLIVersion_": "3.5",
         "crosswalkVersion_": "stable",
-        "appVersion_": "0.0.1",
+        "appVersion_": "1.0.0",
         "appDescription_": "XCardboard is a Hybrid-App sample for Googles Cardboard based on Apache Cordova and coded with Intel XDK.",
         "appAuthor_": "Gregor Biswanger, Christine Krupinski, Patrick Herting",
         "appVersionCode_": "1"
