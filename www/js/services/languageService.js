@@ -1,5 +1,4 @@
 var languageService = function ($translate) {
-
     var onSuccess = function (language) {
         if (language.value.substring(0, 2) == "de") {
             $translate.use("de").then();
