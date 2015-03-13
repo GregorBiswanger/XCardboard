@@ -1,6 +1,6 @@
 {
   "project": {
-    "projectSettingsVersion": "1.2",
+    "projectSettingsVersion": "1.1",
     "creationData": {
       "type": "Demo",
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
